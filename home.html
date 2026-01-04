@@ -48,35 +48,58 @@
 			const canvas = document.getElementById("canvas");
 			const ctx = canvas.getContext("2d");
 
+			/* ---------------- CANVAS ---------------- */
 			function resizeCanvas() {
 				canvas.width = window.innerWidth;
 				canvas.height = window.innerHeight;
 			}
-			resizeCanvas();
-			window.addEventListener("resize", resizeCanvas);
 
-			/* CONFIG — KEPT SAME */
+			/* ---------------- CONFIG ---------------- */
 			const DOTS_COUNT = 170;
 			const MAX_DIST = 170;
 			const BASE_SPEED = 5;
 			const CURSOR_FORCE = 1.4;
 			const CURSOR_RADIUS = 140;
 
+			/* Responsive (dynamic) */
+			let EFFECTIVE_DOTS_COUNT = DOTS_COUNT;
+			let EFFECTIVE_MAX_DIST = MAX_DIST;
+
 			const dots = [];
 			const mouse = { x: null, y: null };
 
-			/* INIT DOTS */
-			for (let i = 0; i < DOTS_COUNT; i++) {
-				const angle = Math.random() * Math.PI * 2;
-				dots.push({
-					x: Math.random() * canvas.width,
-					y: Math.random() * canvas.height,
-					vx: Math.cos(angle) * BASE_SPEED,
-					vy: Math.sin(angle) * BASE_SPEED
-				});
+			/* ---------------- RESPONSIVE LOGIC ---------------- */
+			function updateResponsiveSettings() {
+				const isMobile = window.innerWidth < 768;
+
+				EFFECTIVE_DOTS_COUNT = isMobile ? 130 : DOTS_COUNT;
+				EFFECTIVE_MAX_DIST = isMobile ? 110 : MAX_DIST;
+
+				// rebuild dots only if count changes
+				if (dots.length !== EFFECTIVE_DOTS_COUNT) {
+					dots.length = 0;
+					for (let i = 0; i < EFFECTIVE_DOTS_COUNT; i++) {
+						const angle = Math.random() * Math.PI * 2;
+						dots.push({
+							x: Math.random() * canvas.width,
+							y: Math.random() * canvas.height,
+							vx: Math.cos(angle) * BASE_SPEED,
+							vy: Math.sin(angle) * BASE_SPEED
+						});
+					}
+				}
 			}
 
-			/* MOUSE */
+			/* ---------------- INIT ---------------- */
+			resizeCanvas();
+			updateResponsiveSettings();
+
+			window.addEventListener("resize", () => {
+				resizeCanvas();
+				updateResponsiveSettings();
+			});
+
+			/* ---------------- MOUSE ---------------- */
 			window.addEventListener("mousemove", e => {
 				mouse.x = e.clientX;
 				mouse.y = e.clientY;
@@ -86,14 +109,15 @@
 				mouse.y = null;
 			});
 
+			/* ---------------- ANIMATION ---------------- */
 			function animate() {
 				ctx.clearRect(0, 0, canvas.width, canvas.height);
 
 				for (let i = 0; i < dots.length; i++) {
 					const d = dots[i];
 
-					/* CURSOR WAVE — SMOOTH, NO STICK */
-					if (mouse.x !== null) {
+					/* Cursor wave only on desktop */
+					if (window.innerWidth >= 768 && mouse.x !== null) {
 						const dx = d.x - mouse.x;
 						const dy = d.y - mouse.y;
 						const dist = Math.sqrt(dx * dx + dy * dy) || 1;
@@ -105,35 +129,35 @@
 						}
 					}
 
-					/* 🔥 NORMALIZE SPEED (NO VIBRATION, ALWAYS FAST) */
+					/* Normalize speed (no vibration, always smooth) */
 					const speed = Math.sqrt(d.vx * d.vx + d.vy * d.vy) || 1;
 					d.vx = (d.vx / speed) * BASE_SPEED;
 					d.vy = (d.vy / speed) * BASE_SPEED;
 
-					/* MOVE */
+					/* Move */
 					d.x += d.vx;
 					d.y += d.vy;
 
-					/* EDGE WRAP (SMOOTHER THAN BOUNCE) */
+					/* Wrap edges */
 					if (d.x < 0) d.x = canvas.width;
 					if (d.x > canvas.width) d.x = 0;
 					if (d.y < 0) d.y = canvas.height;
 					if (d.y > canvas.height) d.y = 0;
 
-					/* DOT */
+					/* Dot */
 					ctx.beginPath();
 					ctx.arc(d.x, d.y, 2, 0, Math.PI * 2);
 					ctx.fillStyle = "#666";
 					ctx.fill();
 
-					/* WEB */
+					/* Web */
 					for (let j = i + 1; j < dots.length; j++) {
 						const dx2 = d.x - dots[j].x;
 						const dy2 = d.y - dots[j].y;
 						const dist2 = Math.sqrt(dx2 * dx2 + dy2 * dy2);
 
-						if (dist2 < MAX_DIST) {
-							ctx.strokeStyle = `rgba(110,110,110,${1 - dist2 / MAX_DIST})`;
+						if (dist2 < EFFECTIVE_MAX_DIST) {
+							ctx.strokeStyle = `rgba(110,110,110,${1 - dist2 / EFFECTIVE_MAX_DIST})`;
 							ctx.lineWidth = 1;
 							ctx.beginPath();
 							ctx.moveTo(d.x, d.y);
@@ -148,6 +172,7 @@
 
 			animate();
 		</script>
+
 
 	</div>
 
