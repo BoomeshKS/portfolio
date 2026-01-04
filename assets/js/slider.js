@@ -36,7 +36,7 @@ jQuery(document).ready(function() {
 
 	/************************* Feature Slider **************************/
 
-	$('.salva-inter-list-wrap').slick({
+	$('.boomesh-inter-list-wrap').slick({
 		slidesToShow: 6,
 		slidesToScroll: 1,
 		autoplay: true,

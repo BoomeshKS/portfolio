@@ -12,21 +12,21 @@ jQuery(document).ready(function() {
 
 	/*------------------------ [Weekend Mode Button] ------------------------*/
 
-	jQuery(".salva-switch-btn input:checkbox").on('click', function() {
-		jQuery(this).parents(".salva-weekend-mode").toggleClass("checked");
-		if($('.salva-switch-btn input:checkbox:checked').length){
-			jQuery('.salva-project-detail, .salva-portfolio-content, .salva-image-page, .salva-soundcloud-page, .salva-vimeo-content, .salva-youtube-video-page, .salva-home-main-content, .weekend-mode-hide, .salva-slider-page').addClass("hidepage");
-			jQuery('.salva-project-detail, .salva-portfolio-content, .salva-image-page, .salva-soundcloud-page, .salva-vimeo-content, .salva-youtube-video-page, .salva-home-main-content, .weekend-mode-hide, .salva-single-news-content, .salva-slider-page').removeClass("showpage");
+	jQuery(".boomesh-switch-btn input:checkbox").on('click', function() {
+		jQuery(this).parents(".boomesh-weekend-mode").toggleClass("checked");
+		if($('.boomesh-switch-btn input:checkbox:checked').length){
+			jQuery('.boomesh-project-detail, .boomesh-portfolio-content, .boomesh-image-page, .boomesh-soundcloud-page, .boomesh-vimeo-content, .boomesh-youtube-video-page, .boomesh-home-main-content, .weekend-mode-hide, .boomesh-slider-page').addClass("hidepage");
+			jQuery('.boomesh-project-detail, .boomesh-portfolio-content, .boomesh-image-page, .boomesh-soundcloud-page, .boomesh-vimeo-content, .boomesh-youtube-video-page, .boomesh-home-main-content, .weekend-mode-hide, .boomesh-single-news-content, .boomesh-slider-page').removeClass("showpage");
 		} else {
-			jQuery('.salva-project-detail, .salva-single-news-content').removeClass('showpage');
-			jQuery('.salva-portfolio-content, .salva-home-main-content, .weekend-mode-hide').removeClass('hidepage');
+			jQuery('.boomesh-project-detail, .boomesh-single-news-content').removeClass('showpage');
+			jQuery('.boomesh-portfolio-content, .boomesh-home-main-content, .weekend-mode-hide').removeClass('hidepage');
 		}
-		jQuery(".salva-weekend-mode, .salva-home-image").toggleClass("showpage");
-		jQuery(".salva-weekend-image").toggleClass("visible-img");
+		jQuery(".boomesh-weekend-mode, .boomesh-home-image").toggleClass("showpage");
+		jQuery(".boomesh-weekend-image").toggleClass("visible-img");
 	});
 
 	jQuery(".salv-burger").on('click', function() {
-		jQuery('.salva-about-wrap, .salva-home-wrap').toggleClass("border-none");
+		jQuery('.boomesh-about-wrap, .boomesh-home-wrap').toggleClass("border-none");
 	});
 
 	jQuery(".salv-burger").on('click', function() {
@@ -68,66 +68,66 @@ jQuery(document).ready(function() {
 	/*------------------------ [Tab on click] ------------------------*/
 
 	jQuery(".all-content-wrap.detail-page").click(function() {
-		jQuery('.salva-project-detail').toggleClass("showpage");
-		jQuery('.salva-portfolio-content').toggleClass("hidepage");
+		jQuery('.boomesh-project-detail').toggleClass("showpage");
+		jQuery('.boomesh-portfolio-content').toggleClass("hidepage");
 	});
 	jQuery(".close").click(function() {
-		jQuery('.salva-portfolio-content').removeClass("hidepage");
-		jQuery('.salva-project-detail').removeClass("showpage");
+		jQuery('.boomesh-portfolio-content').removeClass("hidepage");
+		jQuery('.boomesh-project-detail').removeClass("showpage");
 	});
 
 	jQuery(".all-content-wrap.image-page").click(function() {
-		jQuery('.salva-image-page').toggleClass("showpage");
-		jQuery('.salva-portfolio-content').toggleClass("hidepage");
+		jQuery('.boomesh-image-page').toggleClass("showpage");
+		jQuery('.boomesh-portfolio-content').toggleClass("hidepage");
 	})
 	jQuery(".image-close").click(function() {
-		jQuery('.salva-portfolio-content').removeClass("hidepage");
-		jQuery('.salva-image-page').removeClass("showpage");
+		jQuery('.boomesh-portfolio-content').removeClass("hidepage");
+		jQuery('.boomesh-image-page').removeClass("showpage");
 	});
 	
 	jQuery(".all-content-wrap.slider-page").click(function() {
-		jQuery('.salva-slider-page').toggleClass("showpage");
-		jQuery('.salva-portfolio-content').toggleClass("hidepage");
+		jQuery('.boomesh-slider-page').toggleClass("showpage");
+		jQuery('.boomesh-portfolio-content').toggleClass("hidepage");
 	})
 	jQuery(".image-close").click(function() {
-		jQuery('.salva-portfolio-content').removeClass("hidepage");
-		jQuery('.salva-slider-page').removeClass("showpage");
+		jQuery('.boomesh-portfolio-content').removeClass("hidepage");
+		jQuery('.boomesh-slider-page').removeClass("showpage");
 	});
 
 	jQuery(".all-content-wrap.soundcloud-page").click(function() {
-		jQuery('.salva-soundcloud-page').toggleClass("showpage");
-		jQuery('.salva-portfolio-content').toggleClass("hidepage");
+		jQuery('.boomesh-soundcloud-page').toggleClass("showpage");
+		jQuery('.boomesh-portfolio-content').toggleClass("hidepage");
 	})
 	jQuery(".image-close").click(function() {
-		jQuery('.salva-portfolio-content').removeClass("hidepage");
-		jQuery('.salva-soundcloud-page').removeClass("showpage");
+		jQuery('.boomesh-portfolio-content').removeClass("hidepage");
+		jQuery('.boomesh-soundcloud-page').removeClass("showpage");
 	});
 
 	jQuery(".all-content-wrap.vimeo-video-page").click(function() {
-		jQuery('.salva-vimeo-content').toggleClass("showpage");
-		jQuery('.salva-portfolio-content').toggleClass("hidepage");
+		jQuery('.boomesh-vimeo-content').toggleClass("showpage");
+		jQuery('.boomesh-portfolio-content').toggleClass("hidepage");
 	})
 	jQuery(".image-close").click(function() {
-		jQuery('.salva-portfolio-content').removeClass("hidepage");
-		jQuery('.salva-vimeo-content').removeClass("showpage");
+		jQuery('.boomesh-portfolio-content').removeClass("hidepage");
+		jQuery('.boomesh-vimeo-content').removeClass("showpage");
 	});
 
 	jQuery(".all-content-wrap.youtube-video-page").click(function() {
-		jQuery('.salva-youtube-video-page').toggleClass("showpage");
-		jQuery('.salva-portfolio-content').toggleClass("hidepage");
+		jQuery('.boomesh-youtube-video-page').toggleClass("showpage");
+		jQuery('.boomesh-portfolio-content').toggleClass("hidepage");
 	})
 	jQuery(".image-close").click(function() {
-		jQuery('.salva-portfolio-content').removeClass("hidepage");
-		jQuery('.salva-youtube-video-page').removeClass("showpage");
+		jQuery('.boomesh-portfolio-content').removeClass("hidepage");
+		jQuery('.boomesh-youtube-video-page').removeClass("showpage");
 	});
 
 	jQuery(".salv-blog-wrap").click(function() {
-		jQuery('.salva-single-news-content').toggleClass("showpage");
-		jQuery('.salva-news-content').toggleClass("hidepage");
+		jQuery('.boomesh-single-news-content').toggleClass("showpage");
+		jQuery('.boomesh-news-content').toggleClass("hidepage");
 	});
 	jQuery(".blog-back-btn").click(function() {
-		jQuery('.salva-news-content').removeClass("hidepage");
-		jQuery('.salva-single-news-content').removeClass("showpage");
+		jQuery('.boomesh-news-content').removeClass("hidepage");
+		jQuery('.boomesh-single-news-content').removeClass("showpage");
 	});
 
 
@@ -182,6 +182,6 @@ const $hoverables = document.querySelectorAll('.hoverable');
 	}
 
 /*------------------------ [Menu hide during weekend mode] ------------------------*/
-$(".salva-switch-btn input").click(function(){
+$(".boomesh-switch-btn input").click(function(){
   $("body").toggleClass("menu-hide-wrap");
 });

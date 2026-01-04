@@ -154,7 +154,7 @@ a:hover {
 /*------------------------ [2.Homepage CSS] ------------------------*/
 
 .boomesh-home-image {
-	background-image: url(../img/Boomesh-AI.jpeg);
+	background-image: url(../img/Boomesh-AI.png);
     background-size: cover;
     width: inherit;
     height: 100vh;
@@ -167,6 +167,7 @@ a:hover {
     max-width: 100%;
     max-height: 100%;
 }
+
 .boomesh-header {
 	border-bottom: 2px solid #000000;
 }
