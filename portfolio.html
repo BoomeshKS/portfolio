@@ -14,6 +14,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;900&amp;display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="/assets/css/custom.css">
 	<link rel="stylesheet" type="text/css" href="/assets/css/media-query.css">
+	<script src="https://cdn.tailwindcss.com"></script>
 	<link rel="stylesheet" href="/assets/css/project.css">
 </head>
 <body class="boomesh-body-wrap boomesh-page-wrap-light">
@@ -203,6 +204,8 @@
 			</svg>
 		</div>
 	</div>
+
+	
 	<!--boomesh page content start here -->
 	<div class="boomesh-page-wrap portfolio-page-wrap">
 		<!--boomesh portfolio content start here-->
@@ -337,150 +340,484 @@
 										</div>
 									</div>
 								</header>
-								<h2 class="salv-about-title md-font b-text inter-font-900 mb-4">
-									Projects
-								</h2>
+								<h2 class="salv-about-title salv-home-title md-font b-text inter-font-900 mb-0 text-4xl ml-3 mt-3" data-aos="flip-left" data-aos-easing="ease-out-cubic" data-aos-duration="2000">Projects</h2>
 
 
 
-								<div class="row salv-service-card flex-nowrap overflow-auto project-row">
 
-									<div class="col-10 col-md-6 col-lg-4 service-card-col">
-										<div class="card1 service-card-wrap project-card">
+								<section class="w-full flex justify-center items-center">
 
-											<!-- Project Image -->
-											<div class="project-image">
-												<img src="/assets/projects/pro-1.png" alt="Altruisty Platform">
-											</div>
-
-											<!-- Project Content -->
-											<div class="project-content">
-												<h4 class="project-title">
-													Two-Tier DevOps Project
-												</h4>
-
-												<p class="project-desc">
-													A two-tier DevOps-enabled web platform consisting of a frontend layer and a
-													backend service layer, automated builds.
-												</p>
-											</div>
+								<!-- Scroll container -->
+								<div
+									id="slow-scroll"
+									class="h-[520px]
+											overflow-y-auto md:overflow-hidden
+											scroll-smooth
+											[scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
 
 
-											<!-- Hover Overlay -->
-											<div class="project-hover">
-												<a href="https://github.com/BoomeshKS/two-tier-devops-project" class="project-link" style="color: white;">
-													View Project →
-												</a>
-											</div>
+									<div class="flex flex-col items-center gap-[180px] py-12">
 
-											<div class="go-corner"><div class="go-arrow"></div></div>
+									<!-- CARD 1-->
+									<div
+										class="project-card hidden w-[480px] h-[480px]
+											rounded-2xl
+											backdrop-blur-md bg-black/5
+											border border-black/25
+											px-12 py-10
+											opacity-0 scale-[0.85]
+											transition-all duration-[3600ms] ease-out ">
+										<div class="flex items-start justify-between mt-8 mb-3 gap-8">
+
+										<!-- Project Image -->
+										<img
+											src="./assets/projects/pro-1.png"
+											class="w-28 h-28 rounded-lg bg-black/25 -mt-12"
+											alt="Project Image"
+										/>
+
+										<!-- Tags (2 up + 2 down) -->
+										<div class="grid grid-cols-2 gap-3">
+
+											<span class="px-4 py-1 text-xs rounded-full
+														border border-black/60
+														bg-black/10
+														text-gray-900 tracking-wide text-center">
+											Jenkins
+											</span>
+
+											<span class="px-4 py-1 text-xs rounded-full
+														border border-black/60
+														bg-black/10
+														text-gray-900 tracking-wide text-center">
+											Git
+											</span>
+
+											<span class="px-4 py-1 text-xs rounded-full
+														border border-black/60
+														bg-black/10
+														text-gray-900 tracking-wide text-center">
+											CI/CD
+											</span>
+
+											<span class="px-4 py-1 text-xs rounded-full
+														border border-black/60
+														bg-black/10
+														text-gray-900 tracking-wide text-center">
+											Docker
+											</span>
+
 										</div>
 
-									</div>
-									<div class="col-10 col-md-6 col-lg-4 service-card-col">
-										<div class="card1 service-card-wrap project-card">
-
-											<!-- Project Image -->
-											<div class="project-image">
-												<img src="/assets/projects/pro-2.png" alt="Altruisty Platform">
-											</div>
-
-											<!-- Project Content -->
-											<div class="project-content">
-												<h4 class="project-title">
-													Stack Overflow Clone
-												</h4>
-
-												<p class="project-desc">
-													A MERN-based Q&A platform that allows users to post questions, share answers,
-													and interact through voting, built with scalable APIs.
-												</p>
-											</div>
-
-
-											<!-- Hover Overlay -->
-											<div class="project-hover">
-												<a href="https://myprojects-1.netlify.app/" class="project-link" style="color: white;">
-													View Project →
-												</a>
-											</div>
-
-											<div class="go-corner"><div class="go-arrow"></div></div>
 										</div>
 
-									</div>
-									<div class="col-10 col-md-6 col-lg-4 service-card-col">
-										<div class="card1 service-card-wrap project-card">
 
-											<!-- Project Image -->
-											<div class="project-image">
-												<img src="/assets/projects/pro-3.png" alt="Altruisty Platform">
-											</div>
+										<h3 class="text-xl font-semibold mb-2 text-gray-900">
+										Two-Tier DevOps Project
+										</h3>
 
-											<!-- Project Content -->
-											<div class="project-content">
-												<h4 class="project-title">
-													Smart Data Automation
-												</h4>
+										<div class="h-px w-full bg-black/25 mb-6"></div>
 
-												<p class="project-desc">
-													An intelligent automation system designed to extract, process, and analyze
-													structured data from datasets and optimized data handling.
-												</p>
-											</div>
+										<ul class="text-sm text-gray-700 leading-relaxed mb-9 max-w-[460px] space-y-2 list-disc list-inside">
+											<li>
+												Built as a <span class="font-semibold text-gray-900">two-tier architecture</span> with
+												separate <span class="font-semibold text-gray-900">frontend</span> and
+												<span class="font-semibold text-gray-900">backend</span> layers.
+											</li>
+											<li>
+												Integrated <span class="font-semibold text-gray-900">DevOps practices</span> to automate
+												build, test, and deployment workflows.
+											</li>
+											<li>
+												Implemented <span class="font-semibold text-gray-900">CI/CD pipelines</span> for continuous
+												integration and continuous delivery.
+											</li>
+										</ul>
 
-
-											<!-- Hover Overlay -->
-											<div class="project-hover">
-												<a href="https://ignite-project.netlify.app/" class="project-link" style="color: white;">
-													View Project →
-												</a>
-											</div>
-
-											<div class="go-corner"><div class="go-arrow"></div></div>
-										</div>
-
-									</div>
-									<div class="col-10 col-md-6 col-lg-4 service-card-col">
-										<div class="card1 service-card-wrap project-card">
-
-											<!-- Project Image -->
-											<div class="project-image">
-												<img src="/assets/projects/pro-4.png" alt="Altruisty Platform">
-											</div>
-
-											<!-- Project Content -->
-											<div class="project-content">
-												<h4 class="project-title">
-													AI Voting System
-												</h4>
-
-												<p class="project-desc">
-													An intelligent voting system built using the MEAN stack to securely manage
-													elections, validate votes, and
-													ensuring transparency, accuracy, and trust in the voting process.
-												</p>
-											</div>
-
-
-											<!-- Hover Overlay -->
-											<div class="project-hover">
-												<a href="https://trustvotex.netlify.app/" class="project-link" style="color: white;">
-													View Project →
-												</a>
-											</div>
-
-											<div class="go-corner"><div class="go-arrow"></div></div>
-										</div>
+										
+										<a
+										href="https://github.com/BoomeshKS/two-tier-devops-project.git"
+										class="inline-flex px-8 py-3 rounded-lg
+												border border-black/70
+												bg-black/5
+												text-sm font-medium text-gray-900
+												transition-all duration-500
+												hover:bg-black hover:text-white">
+										Link →
+										</a>
 
 									</div>
 
 
+									<!-- CARD 2 -->
+									<div
+										class="project-card hidden w-[480px] h-[480px]
+											rounded-2xl
+											backdrop-blur-md bg-black/5
+											border border-black/25
+											px-12 py-10
+											opacity-0 scale-[0.85]
+											transition-all duration-[3600ms] ease-out ">
+										<div class="flex items-start justify-between mt-8 mb-3 gap-8">
+
+										<!-- Project Image -->
+										<img
+											src="./assets/projects/project-2.png"
+											class="w-28 h-28 rounded-lg bg-black/25 -mt-12"
+											alt="Project Image"
+										/>
+
+										<!-- Tags (2 up + 2 down) -->
+										<div class="grid grid-cols-2 gap-3">
+
+											<span class="px-4 py-1 text-xs rounded-full
+														border border-black/60
+														bg-black/10
+														text-gray-900 tracking-wide text-center">
+											Vite+React
+											</span>
+
+											<span class="px-4 py-1 text-xs rounded-full
+														border border-black/60
+														bg-black/10
+														text-gray-900 tracking-wide text-center">
+											Django
+											</span>
+
+											<span class="px-4 py-1 text-xs rounded-full
+														border border-black/60
+														bg-black/10
+														text-gray-900 tracking-wide text-center">
+											PostgreSQL
+											</span>
+
+											<span class="px-4 py-1 text-xs rounded-full
+														border border-black/60
+														bg-black/10
+														text-gray-900 tracking-wide text-center">
+											API
+											</span>
+
+										</div>
+
+										</div>
+
+
+										<h3 class="text-xl font-semibold mb-2 text-gray-900">
+										Job Portal
+										</h3>
+
+										<div class="h-px w-full bg-black/25 mb-6"></div>
+
+										<ul class="text-sm text-gray-700 leading-relaxed mb-9 max-w-[460px] space-y-2 list-disc list-inside">
+											<li>
+												Developed the frontend using <span class="font-semibold text-gray-900">Vite + React</span>
+												for fast builds, modular components, and responsive UI.
+											</li>
+											<li>
+												Built a robust backend with <span class="font-semibold text-gray-900">Django</span>,
+												exposing <span class="font-semibold text-gray-900">RESTful APIs</span> to manage job data.
+											</li>
+		
+											<li>
+												Stored and managed application data using
+												<span class="font-semibold text-gray-900">Neon PostgreSQL</span>,
+												scalability, and secure data persistence.
+											</li>
+										</ul>
+							
+										<a
+										href="https://jobportal-ks.web.app/"
+										class="inline-flex px-8 py-3 rounded-lg
+												border border-black/70
+												bg-black/5
+												text-sm font-medium text-gray-900
+												transition-all duration-500
+												hover:bg-black hover:text-white">
+										Link →
+										</a>
+
+									</div>
+
+									<!-- Card 3 -->
+									<div
+										class="project-card hidden w-[480px] h-[480px]
+											rounded-2xl
+											backdrop-blur-md bg-black/5
+											border border-black/25
+											px-12 py-10
+											opacity-0 scale-[0.85]
+											transition-all duration-[3600ms] ease-out ">
+										<div class="flex items-start justify-between mt-8 mb-3 gap-8">
+
+										<!-- Project Image -->
+										<img
+											src="./assets/projects/stack-clone.png"
+											class="w-28 h-28 rounded-lg bg-black/25 -mt-12"
+											alt="Project Image"
+										/>
+
+										<!-- Tags (2 up + 2 down) -->
+										<div class="grid grid-cols-2 gap-3">
+
+											<span class="px-4 py-1 text-xs rounded-full
+														border border-black/60
+														bg-black/10
+														text-gray-900 tracking-wide text-center">
+											Next.js
+											</span>
+
+											<span class="px-4 py-1 text-xs rounded-full
+														border border-black/60
+														bg-black/10
+														text-gray-900 tracking-wide text-center">
+											Node.js
+											</span>
+
+											<span class="px-4 py-1 text-xs rounded-full
+														border border-black/60
+														bg-black/10
+														text-gray-900 tracking-wide text-center">
+											MongoDB
+											</span>
+
+											<span class="px-4 py-1 text-xs rounded-full
+														border border-black/60
+														bg-black/10
+														text-gray-900 tracking-wide text-center">
+											API
+											</span>
+
+										</div>
+
+										</div>
+
+
+										<h3 class="text-xl font-semibold mb-2 text-gray-900">
+										Stack OverFlow Clone
+										</h3>
+
+										<div class="h-px w-full bg-black/25 mb-6"></div>
+
+										<ul class="text-sm text-gray-700 leading-relaxed mb-9 max-w-[460px] space-y-2 list-disc list-inside">
+										<li>
+											Built the frontend with <span class="font-semibold text-gray-900">Next.js</span>
+											to enable <span class="font-semibold text-gray-900">server-side rendering</span>
+											and optimized routing.
+										</li>
+										<li>
+											Developed the backend using <span class="font-semibold text-gray-900">Node.js</span>
+											with <span class="font-semibold text-gray-900">RESTful APIs</span> to manage
+											questions, answers, and votes.
+										</li>
+										<li>
+											Implemented core Q&A features including
+											<span class="font-semibold text-gray-900">question posting</span>,
+											<span class="font-semibold text-gray-900">answer submissions</span>, and
+											<span class="font-semibold text-gray-900">voting system</span>.
+										</li>
+										</ul>
+
+							
+										<a
+										href="https://codequest-ks.web.app/"
+										class="inline-flex px-8 py-3 rounded-lg
+												border border-black/70
+												bg-black/5
+												text-sm font-medium text-gray-900
+												transition-all duration-500
+												hover:bg-black hover:text-white">
+										Link →
+										</a>
+
+									</div>
+
+									<!-- Card 4 -->
+									<div
+										class="project-card hidden w-[480px] h-[480px]
+											rounded-2xl
+											backdrop-blur-md bg-black/5
+											border border-black/25
+											px-12 py-10
+											opacity-0 scale-[0.85]
+											transition-all duration-[3600ms] ease-out ">
+										<div class="flex items-start justify-between mt-8 mb-3 gap-8">
+
+										<!-- Project Image -->
+										<img
+											src="./assets/projects/ATS.png"
+											class="w-28 h-28 rounded-lg bg-black/25 -mt-12"
+											alt="Project Image"
+										/>
+
+										<!-- Tags (2 up + 2 down) -->
+										<div class="grid grid-cols-2 gap-3">
+
+											<span class="px-4 py-1 text-xs rounded-full
+														border border-black/60
+														bg-black/10
+														text-gray-900 tracking-wide text-center">
+											React V7
+											</span>
+
+											<span class="px-4 py-1 text-xs rounded-full
+														border border-black/60
+														bg-black/10
+														text-gray-900 tracking-wide text-center">
+											Puter.js
+											</span>
+
+											<span class="px-4 py-1 text-xs rounded-full
+														border border-black/60
+														bg-black/10
+														text-gray-900 tracking-wide text-center">
+											Serverless
+											</span>
+
+											<span class="px-4 py-1 text-xs rounded-full
+														border border-black/60
+														bg-black/10
+														text-gray-900 tracking-wide text-center">
+											API
+											</span>
+
+										</div>
+
+										</div>
+
+
+										<h3 class="text-xl font-semibold mb-2 text-gray-900">
+										ATS Tracker
+										</h3>
+
+										<div class="h-px w-full bg-black/25 mb-6"></div>
+
+										<ul class="text-sm text-gray-700 leading-relaxed mb-9 max-w-[460px] space-y-2 list-disc list-inside">
+										<li>
+											Built the application using <span class="font-semibold text-gray-900">Puter.js</span>
+											and <span class="font-semibold text-gray-900">React Router v7</span> for efficient
+											client-side routing and seamless navigation.
+										</li>
+										<li>
+											Implemented an <span class="font-semibold text-gray-900">ATS resume analysis engine</span>
+											to evaluate resumes and generate a
+											<span class="font-semibold text-gray-900">compatibility score</span>.
+										</li>
+										<li>
+											Designed the system to parse and assess resumes based on
+											<span class="font-semibold text-gray-900">keywords</span>,
+											<span class="font-semibold text-gray-900">skills</span>, and
+											<span class="font-semibold text-gray-900">job role relevance</span>.
+										</li>
+										</ul>
+
+							
+										<a
+										href="https://resume-checker-ks.web.app/"
+										class="inline-flex px-8 py-3 rounded-lg
+												border border-black/70
+												bg-black/5
+												text-sm font-medium text-gray-900
+												transition-all duration-500
+												hover:bg-black hover:text-white" style="margin-top: -30px;">
+										Link →
+										</a>
+
+
+
+									</div>
+
+
+									</div>
 								</div>
 
+								<div class="flex justify-center mt-10">
+									<button
+										id="arrowBtn"
+										class="hidden md:flex w-12 h-12 rounded-full
+												border border-black/50
+												bg-black/5
+												items-center justify-center
+												text-xl font-semibold text-gray-900
+												transition-all duration-500
+												hover:bg-black hover:text-white ml-4"
+										↓
+									</button>
+								</div>
+
+								</section>
 
 
-								
+								<script>
+								document.addEventListener("DOMContentLoaded", () => {
+								const cards = document.querySelectorAll(".project-card");
+								const arrowBtn = document.getElementById("arrowBtn");
+
+								let currentIndex = 0;
+
+								// Detect mobile (Tailwind md breakpoint ~768px)
+								function isMobile() {
+									return window.innerWidth < 768;
+								}
+
+								function showCard(index) {
+									// On mobile → do nothing (scroll handles it)
+									if (isMobile()) return;
+
+									cards.forEach((card, i) => {
+									if (i === index) {
+										card.classList.remove("hidden", "opacity-0", "scale-[0.85]");
+										card.classList.add("opacity-100", "scale-100");
+									} else {
+										card.classList.add("hidden", "opacity-0", "scale-[0.85]");
+										card.classList.remove("opacity-100", "scale-100");
+									}
+									});
+
+									// Arrow direction
+									arrowBtn.textContent =
+									index === cards.length - 1 ? "↑" : "↓";
+								}
+
+								// Arrow click (desktop only)
+								arrowBtn.addEventListener("click", () => {
+									if (isMobile()) return;
+
+									if (currentIndex < cards.length - 1) {
+									currentIndex++;
+									} else {
+									currentIndex = 0;
+									}
+
+									showCard(currentIndex);
+								});
+
+								// Initial state
+								if (!isMobile()) {
+									showCard(currentIndex);
+								} else {
+									// Mobile: show all cards (for scrolling)
+									cards.forEach(card => {
+									card.classList.remove("hidden", "opacity-0", "scale-[0.85]");
+									card.classList.add("opacity-100", "scale-100");
+									});
+								}
+
+								// Handle resize (rotate / resize window)
+								window.addEventListener("resize", () => {
+									if (isMobile()) {
+									cards.forEach(card => {
+										card.classList.remove("hidden", "opacity-0", "scale-[0.85]");
+										card.classList.add("opacity-100", "scale-100");
+									});
+									} else {
+									showCard(currentIndex);
+									}
+								});
+								});
+								</script>
+
+
 
 								<!--social icon start here -->
 								<div class="salv-social-wrap">
@@ -488,10 +825,10 @@
 										<ul class="salv-social-list">	
 
 											<!-- LinkedIn -->
-											<li class="salv-social-icon"> <a href="https://www.linkedin.com/in/boomeshks-software-developer"> <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_101_156" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20"><path d="M0 0H20V20H0V0Z" fill="white"/></mask><g mask="url(#mask0_101_156)"><path d="M5.78353 4.16652C5.78331 4.60855 5.6075 5.03239 5.29478 5.34479C4.98207 5.6572 4.55806 5.83258 4.11603 5.83236C3.674 5.83214 3.25017 5.65633 2.93776 5.34361C2.62536 5.0309 2.44997 4.60688 2.4502 4.16486C2.45042 3.72283 2.62622 3.29899 2.93894 2.98659C3.25166 2.67419 3.67567 2.4988 4.1177 2.49902C4.55972 2.49924 4.98356 2.67505 5.29596 2.98777C5.60837 3.30049 5.78375 3.7245 5.78353 4.16652ZM5.83353 7.06652H2.5002V17.4999H5.83353V7.06652ZM11.1002 7.06652H7.78353V17.4999H11.0669V12.0249C11.0669 8.97486 15.0419 8.69152 15.0419 12.0249V17.4999H18.3335V10.8915C18.3335 5.74986 12.4502 5.94152 11.0669 8.46652L11.1002 7.06652Z" fill="black"/></g></svg> </a> </li>
+											<li class="salv-social-icon flex items-center justify-center"> <a href="https://www.linkedin.com/in/boomeshks-software-developer"> <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><mask id="mask0_101_156" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="20" height="20"><path d="M0 0H20V20H0V0Z" fill="white"/></mask><g mask="url(#mask0_101_156)"><path d="M5.78353 4.16652C5.78331 4.60855 5.6075 5.03239 5.29478 5.34479C4.98207 5.6572 4.55806 5.83258 4.11603 5.83236C3.674 5.83214 3.25017 5.65633 2.93776 5.34361C2.62536 5.0309 2.44997 4.60688 2.4502 4.16486C2.45042 3.72283 2.62622 3.29899 2.93894 2.98659C3.25166 2.67419 3.67567 2.4988 4.1177 2.49902C4.55972 2.49924 4.98356 2.67505 5.29596 2.98777C5.60837 3.30049 5.78375 3.7245 5.78353 4.16652ZM5.83353 7.06652H2.5002V17.4999H5.83353V7.06652ZM11.1002 7.06652H7.78353V17.4999H11.0669V12.0249C11.0669 8.97486 15.0419 8.69152 15.0419 12.0249V17.4999H18.3335V10.8915C18.3335 5.74986 12.4502 5.94152 11.0669 8.46652L11.1002 7.06652Z" fill="black"/></g></svg> </a> </li>
 
 											<!-- Twitter / X -->
-											<li class="salv-social-icon"> <a href="https://x.com/BoomeshKS"> 
+											<li class="salv-social-icon flex items-center justify-center"> <a href="https://x.com/BoomeshKS"> 
 											<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
 												<path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
 											</svg>
@@ -499,7 +836,7 @@
 											</li>
 
 											<!-- GitHub -->
-											<li class="salv-social-icon">
+											<li class="salv-social-icon flex items-center justify-center">
 												<a href="https://github.com/BoomeshKS" target="_blank" rel="noopener noreferrer">
 													<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 														<path d="M10 1.6665C5.402 1.6665 1.6665 5.402 1.6665 10C1.6665 13.6807 4.10217 16.7782 7.47717 17.8298C7.91634 17.9082 8.07717 17.6407 8.07717 17.4123V15.9273C5.623 16.4998 5.08217 14.8323 5.08217 14.8323C4.67717 13.8323 4.08217 13.5657 4.08217 13.5657C3.273 13.0223 4.14467 13.0323 4.14467 13.0323C5.03967 13.0948 5.51584 13.9473 5.51584 13.9473C6.3125 15.3023 7.61167 14.9073 8.12417 14.6623C8.2025 14.0823 8.435 13.6873 8.6975 13.4623C6.7325 13.239 4.67717 12.4773 4.67717 9.55234C4.67717 8.72734 4.97217 8.05234 5.455 7.52484C5.375 7.29734 5.115 6.38234 5.535 5.14984C5.535 5.14984 6.175 4.94484 8.075 6.21984C8.68417 6.05234 9.3225 5.96984 9.96084 5.96734C10.5992 5.96984 11.2375 6.05234 11.8467 6.21984C13.7467 4.94484 14.3867 5.14984 14.3867 5.14984C14.8067 6.38234 14.5467 7.29734 14.4667 7.52484C14.9492 8.05234 15.2442 8.72734 15.2442 9.55234C15.2442 12.4873 13.1858 13.2373 11.2158 13.4573C11.5567 13.7473 11.8608 14.3198 11.8608 15.2023V17.4123C11.8608 17.6423 12.0192 17.9123 12.4667 17.8298C15.8458 16.7765 18.3335 13.6782 18.3335 10C18.3335 5.402 14.598 1.6665 10 1.6665Z" fill="black"/>
@@ -507,7 +844,7 @@
 												</a>
 											</li>
 											<!-- LeetCode -->
-											<li class="salv-social-icon">
+											<li class="salv-social-icon flex items-center justify-center">
 												<a href="https://leetcode.com/BoomeshKS" target="_blank" rel="noopener noreferrer">
 													<svg
 														width="20"
@@ -553,6 +890,8 @@
 										</div>
 									</div>
 								</div>
+
+								
 								<!--footer content start here -->
 								<footer class="salv-footer-content" id="slv-footer">
 									<div class="salv-footer-wrap">
